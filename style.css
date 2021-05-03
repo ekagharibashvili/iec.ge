@@ -17,7 +17,7 @@ html {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background-image: url('img/banner.jpg');
+    background-image: url('img/graduation.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -35,15 +35,97 @@ html {
 
 .banner-heading {
     margin-bottom: 4rem;
-    height: 20rem;
+    height: 12rem;
+    perspective: 50rem;
+    overflow: hidden;
 }
 
 .heading-1,
 .heading-2,
 .heading-3 {
     font-family: 'Oswald', sans-serif;
-    font-size: 7rem;
+    font-size: 4rem;
     font-weight: 600;
+    text-transform: uppercase;
+    color: wheat;
+    text-shadow: 0.3rem 0.3rem 0.6rem
+    rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: translateZ(4rem);
+    opacity: 0;
+    letter-spacing: 1rem;
 }
+
+.heading-1 {
+    animation: animateHeading 14s 0.5s infinite;
+}
+
+.heading-2 {
+    animation: animateHeading 14s 5s infinite;
+}
+
+.heading-3 {
+    animation: animateHeading 14s 9.5s infinite;
+}
+
+@keyframes animateHeading {
+    0% {
+        transform: translateZ(4rem);
+        opacity: 0;
+        letter-spacing: 1rem;
+    }
+    3% {
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 0.5rem;
+    }
+    25% {
+        transform: translateZ(0);
+        opacity: 1;
+        letter-spacing: 0.5rem;
+    }
+    28% {
+        transform: translateZ(4rem);
+        opacity: 0;
+        letter-spacing: 1rem;
+    }
+    100% {
+        transform: translateZ(4rem);
+        opacity: 0;
+        letter-spacing: 1rem;
+    }
+}
+
+.banner-paragraph {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: wheat;
+    background-color: rgba(0, 0, 0, .6);
+    width: 45%;
+    margin: 0 auto 4rem auto;
+    padding: 1rem 0;
+    box-shadow: 1rem 1rem 5rem 
+    rgba(0, 0, 0, 0.5);
+}
+
+.banner-btn {
+    width: 30rem;
+    height: 6rem;
+    background: linear-gradient(to right,
+    #2e2a2a, rgb(116, 5, 5));
+    color: wheat;
+    font-size: 2rem; 
+    text-transform: uppercase;
+    border-radius: 3rem;
+    border: 0.1rem solid #cf3939;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    text-shadow: 0.6rem 0.3rem 0.2rem rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    width: 18rem;
+}
+
 
 /*end of section 1 */
